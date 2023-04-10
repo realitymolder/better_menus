@@ -1,5 +1,7 @@
 name: better_menus
-description: A new Flutter package project.
+description: >
+  A package aims to bring you better menus and UI
+  elements for your flutter app
 version: 0.0.1
 homepage: https://github.com/realitymolder/better_menus
 
