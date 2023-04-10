@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class BottomPageMenuItem extends StatelessWidget {
-  const BottomPageMenuItem(
+class BottomMenuItem extends StatelessWidget {
+  const BottomMenuItem(
       {super.key,
       required this.leading,
       required this.label,
       this.isList = false,
       required this.onTap});
 
-  const BottomPageMenuItem.list(
+  const BottomMenuItem.list(
       {super.key,
       required this.leading,
       required this.label,

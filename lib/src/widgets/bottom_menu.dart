@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:better_menus/src/widgets/bottom_page_menu_item.dart';
+import 'package:better_menus/src/widgets/bottom_menu_item.dart';
 
 //TODO: Consider putting the main light on the list view of the new bottom menu. That said, create a ticker on the bottom of it (?) to change between menus?
 
-class BottomPageMenu extends StatelessWidget {
-  const BottomPageMenu({
+class BottomMenu extends StatelessWidget {
+  const BottomMenu({
     super.key,
     this.borderRadius,
     this.color,
@@ -12,7 +12,7 @@ class BottomPageMenu extends StatelessWidget {
     this.isList = false,
   });
 
-  const BottomPageMenu.list({
+  const BottomMenu.list({
     super.key,
     this.borderRadius,
     this.color,
@@ -22,7 +22,7 @@ class BottomPageMenu extends StatelessWidget {
 
   final double? borderRadius;
   final Color? color;
-  final List<BottomPageMenuItem> items;
+  final List<BottomMenuItem> items;
   final bool isList;
 
   @override
@@ -43,8 +43,8 @@ class BottomPageMenu extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: items.length,
                       itemBuilder: (context, index) {
-                        final BottomPageMenuItem item = items[index];
-                        return BottomPageMenuItem.list(
+                        final BottomMenuItem item = items[index];
+                        return BottomMenuItem.list(
                           leading: item.leading,
                           // emoji: item.emoji,
                           label: item.label,
@@ -62,8 +62,8 @@ class BottomPageMenu extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: items.length,
                       itemBuilder: (context, index) {
-                        final BottomPageMenuItem item = items[index];
-                        return BottomPageMenuItem(
+                        final BottomMenuItem item = items[index];
+                        return BottomMenuItem(
                           leading: item.leading,
                           label: item.label,
                           onTap: item.onTap,

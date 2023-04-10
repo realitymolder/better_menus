@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class BottomWrapper extends StatelessWidget {
-  const BottomWrapper({
+class BottomSectionWrapper extends StatelessWidget {
+  const BottomSectionWrapper({
     super.key,
     required this.child,
   });

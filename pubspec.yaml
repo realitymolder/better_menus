@@ -1,7 +1,7 @@
 name: better_menus
 description: A new Flutter package project.
 version: 0.0.1
-homepage: string
+homepage: https://github.com/realitymolder/better_menus
 
 environment:
   sdk: ">=2.19.6 <3.0.0"

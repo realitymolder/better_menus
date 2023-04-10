@@ -11,15 +11,15 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      BottomPageMenuItem.list(
+      BottomMenuItem.list(
           leading: const Icon(Icons.window_rounded),
           label: '1st Options',
           onTap: () => Navigator.pushNamed(context, 'first')),
-      BottomPageMenuItem.list(
+      BottomMenuItem.list(
           leading: const Icon(Icons.roller_shades_closed_outlined),
           label: '2nd Options',
           onTap: () => Navigator.pushNamed(context, 'second')),
-      BottomPageMenuItem.list(
+      BottomMenuItem.list(
           leading: const Icon(Icons.ac_unit_outlined),
           label: '3rd Options',
           onTap: () => Navigator.pushNamed(context, 'third')),
@@ -32,8 +32,8 @@ class MainApp extends StatelessWidget {
           Icons.chat_rounded,
           size: 200,
         ),
-        bottomWidget: BottomWrapper(
-          child: BottomPageMenu.list(items: pages),
+        bottomWidget: BottomSectionWrapper(
+          child: BottomMenu.list(items: pages),
         ),
       ),
     );
