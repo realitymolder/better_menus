@@ -51,7 +51,7 @@ class BottomMenu extends StatelessWidget {
                           leading: item.leading,
                           label: item.label,
                           onTap: item.onTap,
-                          router: router != null ? router : null,
+                          router: router,
                           route: item.route,
                         );
                       })

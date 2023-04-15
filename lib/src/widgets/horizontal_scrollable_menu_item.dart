@@ -5,6 +5,7 @@ class HorizontalScrollableMenuItem extends StatelessWidget {
     super.key,
     required this.index,
     required this.text,
+    required this.onTap,
     required this.pageController,
     this.itemColor = const Color(0xFFFFFFFF),
     this.selectedItemColor = const Color(0xFF000000),
@@ -16,11 +17,12 @@ class HorizontalScrollableMenuItem extends StatelessWidget {
 
   final int index;
   final String text;
+  final VoidCallback? onTap;
   final PageController pageController;
-  final Color itemColor;
-  final Color selectedItemColor;
-  final TextStyle itemTextStyle;
-  final TextStyle selectedItemTextStyle;
+  final Color? itemColor;
+  final Color? selectedItemColor;
+  final TextStyle? itemTextStyle;
+  final TextStyle? selectedItemTextStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class HorizontalScrollableMenuItem extends StatelessWidget {
       ),
       child: InkWell(
         borderRadius: BorderRadius.circular(11),
-        onTap: () => pageController.jumpToPage(index),
+        onTap: () => onTap,
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 10,

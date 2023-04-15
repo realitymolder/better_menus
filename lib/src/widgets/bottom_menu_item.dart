@@ -31,7 +31,8 @@ class BottomMenuItem extends StatelessWidget {
     final theme = Theme.of(context);
     return InkWell(
       borderRadius: BorderRadius.circular(16),
-      onTap: () => onTap ?? router.navigateNamed(route),
+      onTap: () =>
+          onTap != null && router == null ? onTap : router.navigateNamed(route),
       child: isList
           ? LimitedBox(
               child: ListTile(
