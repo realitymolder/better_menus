@@ -6,25 +6,32 @@ class BottomMenuItem extends StatelessWidget {
       required this.leading,
       required this.label,
       this.isList = false,
-      required this.onTap});
+      this.onTap,
+      this.route,
+      this.router});
 
   const BottomMenuItem.list(
       {super.key,
       required this.leading,
       required this.label,
       this.isList = true,
-      required this.onTap});
+      this.onTap,
+      this.route,
+      this.router});
 
   final Widget leading;
   final String label;
   final bool isList;
   final VoidCallback? onTap;
+  final String? route;
+  final dynamic router;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return InkWell(
-      onTap: () => onTap,
+      borderRadius: BorderRadius.circular(16),
+      onTap: () => onTap ?? router.navigateNamed(route),
       child: isList
           ? LimitedBox(
               child: ListTile(

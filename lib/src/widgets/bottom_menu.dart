@@ -10,6 +10,7 @@ class BottomMenu extends StatelessWidget {
     this.color,
     required this.items,
     this.isList = false,
+    this.router,
   });
 
   const BottomMenu.list({
@@ -18,12 +19,14 @@ class BottomMenu extends StatelessWidget {
     this.color,
     required this.items,
     this.isList = true,
+    this.router,
   });
 
   final double? borderRadius;
   final Color? color;
   final List<BottomMenuItem> items;
   final bool isList;
+  final dynamic router;
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +49,10 @@ class BottomMenu extends StatelessWidget {
                         final BottomMenuItem item = items[index];
                         return BottomMenuItem.list(
                           leading: item.leading,
-                          // emoji: item.emoji,
                           label: item.label,
                           onTap: item.onTap,
-                          // page: item.page ?? 'dd',
+                          router: router != null ? router : null,
+                          route: item.route,
                         );
                       })
                   : GridView.builder(
@@ -67,23 +70,14 @@ class BottomMenu extends StatelessWidget {
                           leading: item.leading,
                           label: item.label,
                           onTap: item.onTap,
+                          route: item.route,
+                          router: router,
                           // page: item.page ?? 'dd',
                         );
                       },
                     ),
               // physics: const NeverScrollableScrollPhysics(),
             ),
-          ),
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              MenuNavigatorButton(text: 'aaa', onTap: () {}),
-              MenuNavigatorButton(text: 'bbb', onTap: () {}),
-              MenuNavigatorButton(text: 'ccc', onTap: () {}),
-            ],
           ),
         ),
       ],
