@@ -30,9 +30,10 @@ class HorizontalScrollableMenuItem extends StatelessWidget {
       padding: const EdgeInsets.only(
         right: 10,
       ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(11),
-        onTap: () => onTap,
+      child: GestureDetector(
+        onTap: () {
+          onTap;
+        },
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 10,

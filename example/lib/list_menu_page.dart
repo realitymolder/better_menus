@@ -35,38 +35,40 @@ class _ListMenuPageState extends State<ListMenuPage> {
       ),
     ];
 
-    return ExScaffold(
-      appbarTitle: 'Many List Menu + Horizontal',
-      topWidget: const Icon(
-        Icons.chat_rounded,
-        size: 200,
-      ),
-      bottomWidget: BottomSectionWrapper(
-        controller: controller,
-        titles: const ['what', 'the', 'him'],
-        itemColor: Colors.red,
-        selectedItemColor: Colors.black,
-        onTap: ()=> controller.jumpToPage(index);,
-        bottomMenus: [
-          BottomMenu.list(
-            items: pages,
-          ),
-          const BottomMenu.list(
-            items: [
-              BottomMenuItem(leading: Text('wow'), label: 'label'),
-              BottomMenuItem(leading: Text('wow'), label: 'label'),
-              BottomMenuItem(leading: Text('wow'), label: 'label'),
-            ],
-          ),
-          const BottomMenu.list(
-            items: [
-              BottomMenuItem(leading: Text('wow'), label: 'label'),
-              BottomMenuItem(leading: Text('wow'), label: 'label'),
-              BottomMenuItem(leading: Text('wow'), label: 'label'),
-            ],
-          ),
-        ],
-      ),
-    );
+    return const ExScaffold(
+        appbarTitle: 'Many List Menu + Horizontal',
+        topWidget: Icon(
+          Icons.chat_rounded,
+          size: 200,
+        ),
+        bottomWidget: Text('')
+
+        //  BottomSectionWrapper(
+        //   controller: controller,
+        //   titles: const ['what', 'the', 'him'],
+        //   itemColor: Colors.red,
+        //   selectedItemColor: Colors.black,
+        //   // onTap: ()=> controller.jumpToPage(index);,
+        //   bottomMenus: [
+        //     BottomMenu.list(
+        //       items: pages,
+        //     ),
+        //     const BottomMenu.list(
+        //       items: [
+        //         BottomMenuItem(leading: Text('wow'), label: 'label'),
+        //         BottomMenuItem(leading: Text('wow'), label: 'label'),
+        //         BottomMenuItem(leading: Text('wow'), label: 'label'),
+        //       ],
+        //     ),
+        //     const BottomMenu.list(
+        //       items: [
+        //         BottomMenuItem(leading: Text('wow'), label: 'label'),
+        //         BottomMenuItem(leading: Text('wow'), label: 'label'),
+        //         BottomMenuItem(leading: Text('wow'), label: 'label'),
+        //       ],
+        // ),
+        // ],
+        // )
+        );
   }
 }
